@@ -1,0 +1,36 @@
+
+In the simple model of the
+world, “compile” means to convert a program in a high-level language into a
+binary executable full of machine code (CPU instructions). When you compile a C
+program, this is what happens. The result is a file that your operating system
+can run for you. it has machine level instructions . On the other hand ,
+“interpreted” means to executing a program/source code line by line , one line
+at a time .
+
+
+
+Considering from a general
+perspective , compiling is a taking a program in one language and converting it
+to another language , not necessarily machine code . In python , the source
+code is compiled to a much simpler form called bytecode . The bytecode
+instructions are similar to the CPU instructions but are executed by a virtual
+machine . The dis module
+in the Python standard library is the disassembler that can show you Python
+bytecode.
+
+
+The catch is although the
+source code gets “compiled” to the bytecode but the process is entirely
+implicit . One never needs to invoke compiler to run a .py file. Another
+feature which points to the interpretable nature of python is the interactive
+prompt. One can run any code statement directly without explicitly converting
+it to the bytecode.
+
+
+There are some building tools
+which can convert the python source code to executables , that automatically
+sets things up so that modules are imported from the ZIP archive containing PY
+or PYC(or PYO) files and use a small bootstrap script to add the ZIP archive to
+PATH . Examples include : Gordon McMillan’s installer (alternative download)
+(cross-platform), Thomas Heller’s py2exe (Windows), Anthony Tuininga’s
+cx_Freeze (cross-platform), or Bob Ippolito’s py2app (Mac).
